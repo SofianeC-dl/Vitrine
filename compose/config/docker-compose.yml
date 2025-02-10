@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:14        # Vous pouvez choisir la version souhaitée de PostgreSQL
+    environment:
+      POSTGRES_USER: vitrine_user
+      POSTGRES_PASSWORD: vitrine1234
+      POSTGRES_DB: project-vitrine
+    ports:
+      - "5432:5432"           # Redirection du port pour accéder à PostgreSQL
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Volume pour la persistance des données
+
+volumes:
+  pgdata:
