@@ -1,0 +1,36 @@
+
+ -Tables-
+
+User : 
+	- id (key)
+	- Nom (varchar)
+	- prenom (varchar)
+	- description (varchar)
+	- age (integer)
+
+Projet : 
+	- id (key)
+	- nom_projet (varchar)
+	- description (varchar)
+
+projet_lien :
+	- id_projet (clé étrangère vers projet)
+	- id_lien (clé étrangère vers lien)
+
+projet_tag :
+	- id_projet (clé étrangère vers projet)
+	- id_tag (clé étrangère vers tag)
+
+Lien : 
+	- id (key)
+	- lien_http (varchar ou autre)
+
+lien_tag :
+	- id_lien (clé étrangère vers lien)
+	- id_tag (clé étrangère vers tag)
+
+Tag :
+	- id (key)
+	- labelle (varchar)
+	
+
