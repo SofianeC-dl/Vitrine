@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-module.exports = {
+const knexConfig = {
   development: {
     client: 'pg',
     connection: {
@@ -11,7 +11,7 @@ module.exports = {
       port: Number(process.env.DB_PORT) || 5432
     },
     migrations: {
-      directory: './backend/migrations',
+      directory: '../migrations',
       tableName: 'knex_migrations',
       extensions: 'ts'
     },
